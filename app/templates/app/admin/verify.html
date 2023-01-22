@@ -1,0 +1,38 @@
+{% extends "app/admin/base1.html " %}
+{% block content %}
+    <body class="bg-primary">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
+                                    <div class="card-body">
+                                        <form action="{% url 'companyverifypage' pk=request.session.id %}" method="post">
+                                            {% csrf_token %}
+                                            
+                                            <div class="form-floating mb-3">
+                                                <select class="form-control" id="inputEmail" name="verify">
+                                                    <option value="">======= Select Option =========</option>
+                                                    <option value="True">True</option>
+                                                    <option value="False">False</option>
+                                                </select>
+                                            </div>
+                                            <div class="mt-4 mb-0">
+                                                <button type="submit"  class="btn btn-primary btn-block">Submit</button>
+                                            </div>
+                                           
+                                      </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            
+        </div>
+    </body>
+{% endblock %}

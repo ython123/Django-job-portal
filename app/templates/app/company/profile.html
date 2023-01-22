@@ -1,0 +1,140 @@
+{% extends "app/company/base1.html " %}
+{% block content %}
+
+
+                  
+                      <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Company Profile</h3></div>
+                                    <div class="card-body">
+                                        <form action="{% url 'updatecompanyprofilepage' pk=request.session.id %}" method="post" enctype="multipart/form-data">
+                                            {% csrf_token %}
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" value="{{comp.firstname}}" name="firstname" />
+                                                        <label for="inputFirstName">First name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating">
+                                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" name="lastname" value="{{comp.lastname}}"/>
+                                                        <label for="inputLastName">Last name</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" name="email" value="{{user.email}}" />
+                                                <label for="inputEmail">Email address</label>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input class="form-control" id="inputPassword" type="text" placeholder="Create a password" name="state"  value="{{comp.state}}"/>
+                                                        <label for="inputPassword">State</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="Confirm password" name="city" value="{{comp.city}}"/>
+                                                        <label for="inputPasswordConfirm">City</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputEmail" type="text" placeholder="name@example.com" name="country" value="{{comp.country}}"/>
+                                                <label for="inputEmail">Country</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputEmail" type="text" placeholder="name@example.com" name="company" value="{{comp.comapany_name }}" />
+                                                <label for="inputEmail">Company Name </label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputEmail" type="text" placeholder="name@example.com" name="address"  value="{{comp.address}}" />
+                                                <label for="inputEmail">Company Address </label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputEmail" type="tel" placeholder="name@example.com" name="contact"  value="{{comp.contact}}"/>
+                                                <label for="inputEmail">Company contact</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputEmail" type="text" placeholder="name@example.com" name="website"  value="{{comp.website}}" />
+                                                <label for="inputEmail">Company Website</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputEmail" type="text" placeholder="name@example.com" name="description"  value="{{comp.description}}" />
+                                                <label for="inputEmail">Company Description</label>
+                                            </div>
+
+                                           
+
+                                            <div class="form-floating mb-3">
+                                                <li class="list-inline-item">
+                                                    <div class="form-floating mb-3">
+                                                        <div class="custom-file">
+                                                            <input type="file" class="form-control" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="image"   value="{{comp.image}}">
+    
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                 
+                                                <li class="list-inline-item">
+                                                    <h6 class="text-muted mb-0">Upload Company Logo .</h6>
+                                                </li>
+                                                
+                                                
+                                            </div>
+                                            
+                                            
+
+                                            
+                                            <div class="mt-4 mb-0">
+                                                <div class="d-grid">
+                                                    <input class="btn btn-primary btn-block" type="submit" value="Save">
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+            </div>
+
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                       <div>
+                        
+                            <center>
+                                <div class="text-muted">
+                                    <center>
+                                        <p class="mb-0"> Dream Job Success Life ! . Created by Axat and Kishan <i class="mdi mdi-heart text-danger"></i> by Bhargaw Sir .</p>
+                    
+                                    </center>
+                                </div>
+                            </center>
+                            
+                        </div>                        
+                    
+                </div>
+            </footer>
+
+            
+
+
+            
+{% endblock %}
