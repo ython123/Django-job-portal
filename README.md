@@ -1,5 +1,8 @@
 # Django-job-portal
 i developed this project using django framwork 
-Download project and go to cmmand and type myvenv/scripts/activate
-and python manage.py migrate
-after python maanage.py runserver
+How to project run
+step 1 - Download
+step 2 - go to vs code and open this project in vs code
+step 3 - Type command  myvenv\scripts\activate
+step 4 - type python manage.py migrate
+step 5 - type python manage.py runserver
